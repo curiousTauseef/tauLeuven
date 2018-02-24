@@ -9,13 +9,22 @@ function calculateDate(jobStartDate){
     }
     return totalYears+"&"+partialMonths;
 }
-var result = calculateDate(new Date(2015,9,07));
+var result = calculateDate(new Date(2018,2,01));
 var year = result.split("&")[0];
 var month = result.split("&")[1];
 var totalYearsMonthhs = " <span></span> (" + year + " years, " + month + " months)";
 var totalMonths = "(" + month + " months)";
 /*display exp-years on accenture*/
 document.getElementById("insert-workexp-date").innerHTML = totalYearsMonthhs;
+
+
+/*Added code for total summary experience*/
+var result = calculateDate(new Date(2006,9,07));
+var year = result.split("&")[0];
+var month = result.split("&")[1];
+var totalYearsMonthhs = " <span></span> (" + year + " years, " + month + " months)";
+var totalMonths = "(" + month + " months)";
+
 /*display exp-years on summary*/
 document.getElementById("years-of-exp").innerHTML = year + "." + month;
 /*display current year on footer*/
